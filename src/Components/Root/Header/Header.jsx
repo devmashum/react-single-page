@@ -1,14 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Header = () => {
 
-    const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='statistics'>Statistics</NavLink></li>
-        <li><NavLink to='/jobs'>Jobs</NavLink></li>
-        <li><NavLink to='/applied'>Applied Jobs</NavLink></li>
-        <li><NavLink to='/blogs'>Blogs</NavLink></li>
+    const links = < >
+        <li><NavLink className='text-xl font-bold' to='/'>Home</NavLink></li>
+        <li><NavLink className='text-xl font-bold' to='statistics'>Statistics</NavLink></li>
+        <li><NavLink className='text-xl font-bold' to='/jobs'>Jobs</NavLink></li>
+        <li><NavLink className='text-xl font-bold' to='/applied'>Applied Jobs</NavLink></li>
+        <li><NavLink className='text-xl font-bold' to='/blogs'>Blogs</NavLink></li>
     </>
 
     return (
@@ -22,16 +22,16 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <Link a='/'><a className="btn btn-ghost normal-case text-3xl">JOB Market</a></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
-            </div>
+            <Link to='/' className="navbar-end"><div >
+                <a className="btn text-xl font-bold">Button</a>
+            </div></Link>
         </div>
     );
 };
